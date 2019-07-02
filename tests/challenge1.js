@@ -16,8 +16,7 @@ module.exports = {
         // const location = "#contacts > div > div.footer-contacts > div:nth-child(1) > div:nth-child(2) > div.footer-contact-city";   
         page
             .navigate()
-            .waitForElementVisible("@locals")
-            .click('@locals')
+            .waitForElementVisible("@location")
             .expect.element("@location").text.to.equal("PORTO, PT");
     },
     'Challenge 1.3: You must define the selector in order to make the test pass'(browser) {
