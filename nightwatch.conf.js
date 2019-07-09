@@ -13,6 +13,15 @@ module.exports = {
         "desiredCapabilities": {
           "browserName": "chrome"
         }
-      }
-    }
+    //     desiredCapabilities: {
+    //       browserName: 'chrome',
+    //       javascriptEnabled : true,
+    //       acceptSslCerts : true,
+    //       chromeOptions: {mobileEmulation: {
+    //       deviceMetrics: {width: 360, height: 640, pixelRatio: 3},
+    //     }
+    //   }
+    // }
   }
+}
+}
