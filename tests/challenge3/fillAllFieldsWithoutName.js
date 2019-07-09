@@ -1,6 +1,7 @@
 const user = require('../users.js'); 
 
 module.exports = {
+    '@tags': ['desktop'],
     'Challenge 3: Fill all fields without name should a alert message'(browser) {
         const page = browser.page.challenge3();
 
@@ -8,10 +9,7 @@ module.exports = {
             .navigate()
             .fillForm(user.userWithoutName)
             .onSubmit()
-        browser
-            .getAlertText((e) => {
-                browser.assert.equal(e.value, "The information in the form is not correct.")
-            })
-            .acceptAlert()
+            .pause(1000)
+            .userShouldBeCreated(browser);
     }
 }

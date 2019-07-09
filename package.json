@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
-    "challenge1": "nightwach --group tests/challenge1",
+    "challenge1": "nightwach --group test tests/challenge1",
     "challenge2": "nightwach --group test tests/challenge2",
     "challenge3": "nightwach --group test tests/challenge3"
   },

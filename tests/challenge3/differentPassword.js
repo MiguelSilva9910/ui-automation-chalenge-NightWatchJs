@@ -1,6 +1,7 @@
 const user = require('../users.js'); 
 
 module.exports = {
+    '@tags': ['desktop'],
     'Challenge 3: Fill all fields with different passwords should alert message'(browser) {
         const page = browser.page.challenge3();
         
@@ -8,10 +9,6 @@ module.exports = {
             .navigate()
             .fillForm(user.userWithDifferentPasswords)
             .onSubmit()
-        browser
-            .getAlertText((e) => {
-                browser.assert.equal(e.value, 'The information in the form is not correct.')
-            })
-            .acceptAlert()
+            .userShouldBeCreated(browser);
     }
 }

@@ -1,6 +1,7 @@
 const user = require('../users');
 
 module.exports = {
+    '@tags': ['desktop'],
     'Challenge 3: Fill all fields with wrong email and should a alert warning'(browser) {
         const page = browser.page.challenge3();
 
