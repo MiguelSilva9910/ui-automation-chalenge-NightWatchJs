@@ -4,11 +4,20 @@ module.exports = {
         email: 'asdasdasfsd@aafsad',
         password: 'asd123',
         confirmPassword: 'asd123',
+        language: true
+    },
+    userWithoutLanguage: {
+        name: 'Miguel',
+        email: 'asdasdasfsd@aafsad',
+        password: 'asd123',
+        confirmPassword: 'asd123',
+        language: false
     },
     userWithoutName: {
         email: 'asdasdasfsd@aafsad',
         password: 'asd123',
         confirmPassword: 'asd123',
+        language: true
     },
     onlyName: {
         name: 'Miguel'
@@ -17,18 +26,21 @@ module.exports = {
         name: 'Miguel',
         email: 'asdasdasd@asdasda',
         password: 'as123',
-        confirmPassword: '123as'
+        confirmPassword: '123as',
+        language: true
     },
     userWithNumbersWithName: {
         name: 131231231,
         email: 'asdasdasd@asdasdasd',
         password: 'asdasdasd',
-        confirmPassword: 'sadadadad'
+        confirmPassword: 'sadadadad',
+        language: true
     },
     userWithWrongEmail: {
         name: 'Miguel',
         email: 'asdasdas',
         password: 'asdasdad',
-        confirmPassword: 'asdasdasda'
+        confirmPassword: 'asdasdasda',
+        language: true
     }
 }

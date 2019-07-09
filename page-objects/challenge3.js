@@ -2,39 +2,22 @@ const pageActions = {
     fillForm: function(user) {
         if(user.name){
             this.setValue('@iName', user.name)
-            this.setValue('@iEmail', user.email)
-            this.setValue('@iPassword', user.password)
-            this.setValue('@iConfirmPassword', user.confirmPassword)
-            this.click('@dCountry')
-            this.waitForElementVisible('@sCountry')
-            this.click('@sCountry')
-            this.click('@dLanguage')
-            this.waitForElementVisible('@sLanguage')
-            this.click('@sLanguage')
-            this.pause(2000)
-            return this;
-        }else{
-            this.setValue('@iEmail', user.email)
-            this.setValue('@iPassword', user.password)
-            this.setValue('@iConfirmPassword', user.confirmPassword)
-            this.click('@dCountry')
-            this.waitForElementVisible('@sCountry')
-            this.click('@sCountry')
-            this.click('@dLanguage')
-            this.waitForElementVisible('@sLanguage')
-            this.click('@sLanguage')
-            this.pause(2000)
-            return this;
         }
-    },
-    fillFormWithoutLanguage: function(user) {
-        this.setValue('@iName', user.name)
-        this.setValue('@iEmail', user.email)
-        this.setValue('@iPassword', user.password)
-        this.setValue('@iConfirmPassword', user.confirmPassword)
-        this.click('@dCountry')
-        this.waitForElementVisible('@sCountry')
-        this.click('@sCountry')
+        if(user.email){
+            this.setValue('@iEmail', user.email)
+        }
+        if(user.password){
+            this.setValue('@iPassword', user.password)
+        }
+        if(user.confirmPassword){
+            this.setValue('@iConfirmPassword', user.confirmPassword)
+        }
+        if(user.language === true){ 
+            this.click('@dLanguage')
+            this.waitForElementVisible('@sLanguage')
+            this.click('@sLanguage')
+        }
+            this.pause(2000)
         return this;
     },
     onSubmit: function() {

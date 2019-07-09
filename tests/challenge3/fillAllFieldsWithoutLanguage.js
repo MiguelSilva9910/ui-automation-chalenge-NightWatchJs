@@ -6,12 +6,14 @@ module.exports = {
 
         page
             .navigate()
-            .fillFormWithoutLanguage(user.userWithoutAgree)
+            .fillForm(user.userWithoutLanguage)
             .onSubmit()
         browser
+            .pause(1000)
             .getAlertText((e) => {
                 browser.assert.equal(e.value, 'The information in the form is not correct.')
             })
             .acceptAlert()
+            .pause(5000)
     }
 };
