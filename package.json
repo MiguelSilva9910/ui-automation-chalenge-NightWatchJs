@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
-    "challenge1": "nightwach --group test tests/challenge1",
-    "challenge2": "nightwach --group test tests/challenge2",
-    "challenge3": "nightwach --group test tests/challenge3"
+    "challenge1": "nightwatch --group tests/challenge1",
+    "challenge2": "nightwatch --group tests/challenge2",
+    "challenge3": "nightwatch --group tests/challenge3",
+    "challenge1Mobile": "nightwatch --group tests/challenge1 --env mobile",
+    "challenge2Mobile": "nightwatch --group tests/challenge2 --env mobile",
+    "challenge3Mobile": "nightwatch --group tests/challenge3 --env mobile" 
   },
   "keywords": [],
   "author": "",

@@ -9,6 +9,6 @@ module.exports = {
             .click("@peopleAndCulture")
             .waitForElementVisible("@location")
             .expect.element("@location").text.to.equal("PORTO, PT")
-            .pause(10000);
+            browser.pause(10000);
     }
 }

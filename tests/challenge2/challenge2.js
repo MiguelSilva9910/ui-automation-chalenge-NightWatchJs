@@ -5,14 +5,14 @@ module.exports = {
 
         page
             .navigate()
-            .pause(1000)
+            browser.pause(1000)
             .waitForElementVisible("@bubbles")
             .perform(function() {
                 for(let i = 0; i < 5; i++){ 
                     this.click(bubbles);
                 }
             })
-            .pause(1000)
+            browser.pause(1000)
             .expect.element("@score").text.to.be.equal("5");
     }
 };

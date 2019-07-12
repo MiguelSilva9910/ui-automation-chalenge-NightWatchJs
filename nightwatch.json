@@ -19,10 +19,11 @@
                 "javascriptEnabled" : true,
                 "acceptSslCerts" : true,
                 "chromeOptions": {"mobileEmulation": {
-                "deviceMetrics": {"width": 360, "height": 640, "pixelRatio": 3}
-                }
+                    "deviceMetrics": {"width": 360, "height": 640, "pixelRatio": 3}            
+                    }
+                },
+                "deviceName": "iPhone XR"
             }
         }
       }
   }
-}
